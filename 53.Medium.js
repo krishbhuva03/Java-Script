@@ -38,17 +38,17 @@
 //====================================O(n)====================================
 
 
-let arr = [-2,1,-3,4,-1,2,1,-5,4]
-let result = 0
-let max = -Infinity
+// let arr = [-2,1,-3,4,-1,2,1,-5,4]
+// let result = 0
+// let max = -Infinity
 
-for(let i = 0 ; i < arr.length ; i++){
-    for(let j = i ; j < arr.length ; j++){
-        let sum = 0 
-        for(let k = i ; k <= j ; k++){
-            sum += arr[k]
-            max = Math.max(max,sum)
-        }
-    }
-}
-return max;
+// for(let i = 0 ; i < arr.length ; i++){
+//     for(let j = i ; j < arr.length ; j++){
+//         let sum = 0 
+//         for(let k = i ; k <= j ; k++){
+//             sum += arr[k]
+//             max = Math.max(max,sum)
+//         }
+//     }
+// }
+// return max;
