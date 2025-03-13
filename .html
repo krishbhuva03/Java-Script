@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expand Drawer Down</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Drawer container */
+        .drawer-container {
+            position: relative;
+            width: 200px;
+        }
+
+        /* Button */
+        .open-btn {
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            text-align: left;
+        }
+
+        /* Drawer (hidden by default) */
+        .drawer {
+            position: absolute;
+            top: 40px; /* Below the button */
+            left: 0;
+            width: 100%;
+            background: #333;
+            color: white;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.4s ease-out;
+            border-radius: 5px;
+        }
+
+        .drawer a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #555;
+        }
+
+        .drawer a:hover {
+            background: #575757;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="drawer-container">
+        <button class="open-btn" onclick="toggleDrawer()">☰ Menu</button>
+        <div id="drawer" class="drawer">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDrawer() {
+            let drawer = document.getElementById("drawer");
+            if (drawer.style.maxHeight === "0px" || drawer.style.maxHeight === "") {
+                drawer.style.maxHeight = "150px"; // Expand down
+            } else {
+                drawer.style.maxHeight = "0px"; // Collapse up
+            }
+        }
+    </script>
+
+</body>
+</html>
