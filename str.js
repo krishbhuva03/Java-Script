@@ -9,3 +9,6 @@ function reverseString(str) {
 }
 
 console.log(reverseString(str));
+
+
+//reversal of string
